@@ -114,6 +114,20 @@ module.exports = function (mainWindow, nativefierVersion, onQuit) {
                     role: 'close'
                 },
             ]
+        },
+        {
+            label: 'Help',
+            role: 'help',
+            submenu: [
+                {
+                    label: `Report an Vulnerability v${nativefierVersion}`,
+                    click: function() { shell.openExternal('https://libscode.com/security') }
+                },
+                {
+                    label: 'Contact Us',
+                    click: function() { shell.openExternal('https://libscode.com/contact') }
+                }
+            ]
         }
     ];
 
